@@ -1,9 +1,9 @@
-from pg_utils import pgConfig,pgUtils
+from pg.pg_utils import pgConfig,pgUtils
 import random
-from data_utils import DataGenerator
+from data.data_utils import DataGenerator
 import simplejson as json
-from utils import delivery_report
-from kakfa_utils import kafkaUtils
+from utils.utils import delivery_report
+from kafka.kakfa_utils import kafkaUtils
 from voting_processor import VotingProcessor
 
 if __name__ == "__main__":
