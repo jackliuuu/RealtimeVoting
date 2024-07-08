@@ -3,7 +3,7 @@ import random
 from data.data_utils import DataGenerator
 import simplejson as json
 from utils.utils import delivery_report
-from kafka.kakfa_utils import kafkaUtils
+from kafka_utils.kakfa_utils import kafkaUtils
 from voting_processor import VotingProcessor
 
 if __name__ == "__main__":
@@ -31,7 +31,7 @@ if __name__ == "__main__":
             candidate_data = data_generator.generate_candidate_data(i, 3)
             pg_utils.insert_record("candidates",candidate_data)
 
-    if not kafka_utils.topic_is_empty(voters_topic):
+    if  not kafka_utils.topic_is_empty(voters_topic):
         for i in range(100):
             voter_data = data_generator.generate_voter_data()
 

@@ -1,0 +1,5 @@
+/usr/bin/kafka-topics --create --topic aggregated_turnout_by_location  --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+/usr/bin/kafka-topics --create --topic aggregated_votes_per_candidate  --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+/usr/bin/kafka-topics --bootstrap-server localhost:9092 --list
+/usr/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic votes_topic --from-beginning
+/usr/bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic aggregated_turnout_by_location --from-beginning

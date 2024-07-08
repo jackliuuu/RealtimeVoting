@@ -1,10 +1,10 @@
 import random
 import time
 from datetime import datetime
-from pg_utils import pgUtils
-from kakfa_utils import kafkaUtils
+from pg.pg_utils import pgUtils
+from kafka_utils.kakfa_utils import kafkaUtils
 from confluent_kafka import KafkaException
-from utils import delivery_report
+from utils.utils import delivery_report
 import simplejson as json
 
 class VotingProcessor:
